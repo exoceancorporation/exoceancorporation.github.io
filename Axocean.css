@@ -1,0 +1,221 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: rgba(128, 128, 128, 0);
+}
+
+*::-moz-selection {
+    background: rgba(128, 128, 128, 0);
+}
+ 
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0a10;
+}
+::-webkit-scrollbar-thumb{
+   background-color: #8000ff;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+:root{
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    cursor:default;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-dark-mode:#11111b;
+    --color-light-mode:#ece7e1;
+    --color-ddd-color: #ddd;
+    --color-gray: #c4c4c4;
+    --color-purple: #8000ff;
+    --color-light-purple: #cf59e6;
+    --color-light-blue: #6bc5f8;
+    --color-navbarBorder-dark:#20222e10;
+    --color-shadowDark:rgba(0, 0, 0, 0.137);
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+
+}
+.box{
+    width: 33.33%;
+    height: 50vh;
+    filter: blur(250px);
+}
+.red{
+    background-color: rgb(255, 140, 140);
+}
+.yellow{
+    background-color: rgb(255, 255, 166);
+    height: 30vh;
+}
+.blue{
+    background-color: rgb(200, 133, 255);
+}
+.MainContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    position:absolute;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.226);
+}
+.heading-section{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.heading-section h1{
+    font-size: 3rem;
+    font-weight: 600;
+} 
+
+.Content{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+}
+.Content h2{
+    font-size: 10rem;
+    font-weight: 600;
+    background: linear-gradient(-45deg, black , black, black, rgb(141, 141, 141), black, black, black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    -webkit-animation: gradient 3s ease infinite;
+    animation: gradient 3s ease infinite;
+
+}
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    
+    100% {
+        background-position: 0 50%;
+    }
+}
+   
+
+.Content .GoBackButton{
+    width: fit-content;
+    height: fit-content;
+    font-size: 2rem;
+    color: black;
+    padding: 8px 16px;
+    border: 1px solid black;
+    background-color: transparent;
+    font-weight: 400;   
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    position: relative;
+}
+.arrow{
+    width: 2rem;
+}
+.GoBackButton:hover{
+    background-color: black;
+    color: white;
+}
+.GoBackButton:hover .arrow path{
+    stroke: white;
+}
+
+
+/* responsive code below*/
+@media screen and (max-width:1920px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width:998px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+    .Content h2{
+        font-size:9rem;
+    }
+ 
+}
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 45%;  
+    }
+    .Content h2{
+        font-size:7rem;
+    }
+
+}
+
+@media screen and (max-width:430px) {
+    html {
+        font-size: 43%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    html {
+        font-size: 40%;
+    }
+}
+@media screen and (max-width:300px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+/* responsive code above */
+

@@ -1,0 +1,317 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: rgba(128, 128, 128, 0);
+}
+
+*::-moz-selection {
+    background: rgba(128, 128, 128, 0);
+}
+ 
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0a10;
+}
+::-webkit-scrollbar-thumb{
+   background-color: #8000ff;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+:root{
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    cursor:default;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-dark-mode:#11111b;
+    --color-light-mode:#ece7e1;
+    --color-ddd-color: #ddd;
+    --color-gray: #c4c4c4;
+    --color-purple: #8000ff;
+    --color-light-purple: #cf59e6;
+    --color-light-blue: #6bc5f8;
+    --color-navbarBorder-dark:#20222e10;
+    --color-shadowDark:rgba(0, 0, 0, 0.137);
+}
+
+body{
+    background-color: rgb(255, 251, 251);
+    overflow: hidden;
+}
+.preloader{
+    position:fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  .loader {
+    border: 4px solid rgba(0, 0, 0, .1);
+    border-left-color: transparent;
+    border-radius: 50%;
+    width: 5vh;
+    height: 5vh;
+    animation: spin89345 1s linear infinite;
+  }
+  
+  @keyframes spin89345 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /* preloader ends */
+.BigdaddyContainer{
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+
+.box{
+    width: 33.33%;
+    height: 50vh;
+    filter: blur(250px);
+}
+.red{
+    background-color: rgb(255, 140, 140);
+}
+.yellow{
+    background-color: rgb(255, 255, 166);
+    height: 30vh;
+}
+.blue{
+    background-color: rgb(200, 133, 255);
+}
+.mainContainer{
+    padding-top: 70px;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #fff9f92a;
+}
+
+.profileSection{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.profileSection img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.ProfileHeading{
+    color: rgb(12, 12, 12);
+    font-weight: 600;
+    font-size: 2.8rem;
+}
+.aboutdescription{
+    font-size: 1.8rem;
+    color: rgb(95, 95, 95);
+    font-weight: 500;
+    text-align: center;
+}
+.hashtag{
+    font-size: 2.2rem;
+    color: rgb(95, 95, 95);
+    font-weight: 500;
+}
+
+.socialsSection{
+    margin-top: 20px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.socialbuttons{
+    cursor: pointer;
+    min-width: 270px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(223, 223, 223);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    gap: 15px;
+    position: relative;
+    transition: all .2s;
+    margin-bottom: 30px;
+    transition: all .3s ease;
+}
+.socialbuttons img{
+    position: absolute;
+    left:7px;
+    height: 36px;
+    border-radius: 5px;
+}
+.socialbuttons p{
+    align-self: center;
+    color: rgb(12, 12, 12);
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+   
+}
+
+.socialbuttons:hover{
+    transform: scale(1.01);
+}
+.socialbuttons:hover p{
+    color: white;
+}
+.website:hover{
+    background-color: #11111b;
+}
+.amazon:hover{
+    background-color: #231f20;
+
+}
+.flipkart:hover{
+    background-color: #2772ef;
+}
+.meesho:hover{
+    background-color: #580A46;
+}
+.youtube{
+    margin-bottom: 0;
+}
+.signatureSection{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signatureSection img{
+    height: 50%;
+    filter: invert(1);
+}
+/* responsive code below*/
+@media screen and (max-width:1920px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width:998px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+    .mainContainer{
+        width:100%;
+    }
+ 
+}
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 45%;  
+    }
+    .mainContainer{
+        padding-top: 30px;
+        gap: 20px;
+    }
+    .aboutdescription{
+        font-size: 2rem;
+    }
+    .socialsSection{
+        height: 40%;
+    }
+
+    .socialbuttons{
+        height: 55px;
+    }
+    .socialbuttons img{
+        height: 41px;
+    }
+    .socialbuttons p{
+        font-size: 2.1rem;
+    }
+    
+}
+
+@media screen and (max-width:430px) {
+    html {
+        font-size: 43%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    html {
+        font-size: 40%;
+    }
+}
+@media screen and (max-width:300px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+/* responsive code above */
+
